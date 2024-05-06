@@ -3,6 +3,7 @@ import React from "react";
 const VendingMachine = () => {
   const [order, setOrder] = React.useState([]);
   const [started, setStarted] = React.useState(false);
+  const [orderDone, setOrderDone] = React.useState(false);
 
   const addOrder = (name) => {
     const existingItem = order.find((item) => item.name === name);
@@ -23,6 +24,11 @@ const VendingMachine = () => {
 
   const startMachine = () => {
     setStarted(true);
+  };
+
+  const doneOrder = () => {
+    setOrderDone(true);
+    console.log(order);
   };
 
   return (
@@ -75,6 +81,10 @@ const VendingMachine = () => {
         <button onClick={clearOrder} disabled={!started}>
           Cancel
         </button>
+        <button onClick={doneOrder} disabled={!started}>
+          Place Order
+        </button>
+        {orderDone ? <button onClick={clearOrder}>New Order</button> : null}
       </div>
     </div>
   );
