@@ -18,6 +18,19 @@ const VendingMachine = () => {
     }
   };
 
+  const decrementOrder = (name) => {
+    const existingItem = order.find((item) => item.name === name);
+
+    if (existingItem) {
+      const updatedOrder = order
+        .map((item) =>
+          item.name === name ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0);
+      setOrder(updatedOrder);
+    }
+  };
+
   const clearOrder = () => {
     setOrder([]);
   };
@@ -31,60 +44,71 @@ const VendingMachine = () => {
     console.log(order);
   };
 
+  const buttonStyle = { margin: '5px' };
+
   return (
-    <div>
-      <button onClick={startMachine}>Start</button>
-      <div id="snacks">
-        <button onClick={() => addOrder("Pastil")} disabled={!started}>
-          Pastil
-        </button>
-        <button onClick={() => addOrder("Sandwich")} disabled={!started}>
-          Sandwich
-        </button>
-        <button onClick={() => addOrder("Empanada")} disabled={!started}>
-          Empanada
-        </button>
-      </div>
-      <div id="meal">
-        <button onClick={() => addOrder("Kawayan")} disabled={!started}>
-          Kawayanan
-        </button>
-        <button onClick={() => addOrder("Silog")} disabled={!started}>
-          Silog
-        </button>
-        <button onClick={() => addOrder("Pastil")} disabled={!started}>
-          Pastil
-        </button>
-      </div>
-
-      <div id="drinks">
-        <button onClick={() => addOrder("DonMac")} disabled={!started}>
-          DonMac
-        </button>
-        <button onClick={() => addOrder("TasteTickles")} disabled={!started}>
-          TasteTickles
-        </button>
-        <button onClick={() => addOrder("Gulp")} disabled={!started}>
-          Gulp
-        </button>
-      </div>
-
-      <div id="orderbar">
-        <h2>Orders:</h2>
-        <ul>
-          {order.map((item, index) => (
-            <li key={index}>
-              {item.name} - Quantity: {item.quantity}
-            </li>
-          ))}
-        </ul>
-        <button onClick={clearOrder} disabled={!started}>
-          Cancel
-        </button>
-        <button onClick={doneOrder} disabled={!started}>
-          Place Order
-        </button>
-        {orderDone ? <button onClick={clearOrder}>New Order</button> : null}
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <div style={{ textAlign: 'center' }}>
+        <button onClick={startMachine} style={{ marginBottom: '10px' }}>Start</button>
+        <div id="snacks" style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+          <button onClick={() => addOrder("Pastil")} disabled={!started} style={buttonStyle}>
+            Pastil
+          </button>
+          <button onClick={() => addOrder("Sandwich")} disabled={!started} style={buttonStyle}>
+            Sandwich
+          </button>
+          <button onClick={() => addOrder("Empanada")} disabled={!started} style={buttonStyle}>
+            Empanada
+          </button>
+        </div>
+        <div id="meal" style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+          <button onClick={() => addOrder("Kawayan")} disabled={!started} style={buttonStyle}>
+            Kawayanan
+          </button>
+          <button onClick={() => addOrder("Silog")} disabled={!started} style={buttonStyle}>
+            Silog
+          </button>
+          <button onClick={() => addOrder("Pastil")} disabled={!started} style={buttonStyle}>
+            Pastil
+          </button>
+        </div>
+        <div id="drinks" style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
+          <button onClick={() => addOrder("DonMac")} disabled={!started} style={buttonStyle}>
+            DonMac
+          </button>
+          <button onClick={() => addOrder("TasteTickles")} disabled={!started} style={buttonStyle}>
+            TasteTickles
+          </button>
+          <button onClick={() => addOrder("Gulp")} disabled={!started} style={buttonStyle}>
+            Gulp
+          </button>
+        </div>
+        <div id="orderbar">
+          <h2>Orders:</h2>
+          <ul style={{ listStyleType: 'none', padding: 0 }}>
+            {order.map((item, index) => (
+              <li key={index} style={{ marginBottom: '5px' }}>
+                {item.name} - Quantity: 
+                <button onClick={() => decrementOrder(item.name)} disabled={!started} style={buttonStyle}>
+                  -
+                </button> 
+                {item.quantity} 
+                <button onClick={() => addOrder(item.name)} disabled={!started} style={buttonStyle}>
+                  +
+                </button>
+              </li>
+            ))}
+          </ul>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+            <button onClick={clearOrder} disabled={!started} style={buttonStyle}>
+              Cancel
+            </button>
+            <button onClick={doneOrder} disabled={!started} style={buttonStyle}>
+              Place Order
+            </button>
+            {orderDone ? <button onClick={clearOrder} style={buttonStyle}>New Order</button> : null}
+          </div>
+        </div>
       </div>
     </div>
   );
