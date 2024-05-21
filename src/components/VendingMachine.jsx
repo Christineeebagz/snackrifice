@@ -42,9 +42,11 @@ const VendingMachine = () => {
   };
 
   const doneOrder = () => {
-    setOrderDone(true);
-    console.log(order);
-    window.open("https://payment-gateway.example.com", "_blank");
+    if (order.every(item => item.quantity > 0)) {
+      setOrderDone(true);
+      console.log(order);
+      window.open("https://payment-gateway.example.com", "_blank");
+    }
   };
 
   const buttonStyle = { margin: '5px' };
@@ -106,7 +108,7 @@ const VendingMachine = () => {
             <button onClick={clearOrder} disabled={!started} style={buttonStyle}>
               Cancel
             </button>
-            <button onClick={doneOrder} disabled={!started} style={buttonStyle}>
+            <button onClick={doneOrder} disabled={!started || order.length === 0 || order.some(item => item.quantity === 0)} style={buttonStyle}>
               Place Order
             </button>
             {orderDone ? <button onClick={clearOrder} style={buttonStyle}>New Order</button> : null}
