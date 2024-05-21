@@ -65,6 +65,8 @@ const VendingMachine = () => {
                 text-rendering: optimizeLegibility;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
+
+                user-select: none;
               }
               
               a {
@@ -100,7 +102,7 @@ const VendingMachine = () => {
                 font-family: inherit;
                 background-color: #1a1a1a;
                 cursor: pointer;
-                caret-color: transparent;
+                user-select: none;
                 transition: border-color 0.25s;
               }
               button:hover {
