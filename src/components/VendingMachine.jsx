@@ -33,6 +33,8 @@ const VendingMachine = () => {
 
   const clearOrder = () => {
     setOrder([]);
+    setStarted(false);
+    setOrderDone(false);
   };
 
   const startMachine = () => {
@@ -42,6 +44,7 @@ const VendingMachine = () => {
   const doneOrder = () => {
     setOrderDone(true);
     console.log(order);
+    window.open("https://payment-gateway.example.com", "_blank");
   };
 
   const buttonStyle = { margin: '5px' };
