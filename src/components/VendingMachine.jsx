@@ -212,206 +212,209 @@ const VendingMachine = () => {
         </div>
       </div>
     </div>
-    <div class="navigation-bar">
-      <div class="snackrifice-text">Snackrifice</div>
+ <div> 
+<div class="navigation-bar">
+  <div class="snackrifice-text">Snackrifice</div>
+</div>
+<img class="spotlight1" src="img/spotlight-1.svg" />
+<img class="spotlight2" src="img/spotlight-2.svg" />
+<div class="vending-machine">
+  <div class="overlap-group-wrapper">
+    <div class="title-section">
+      <img class="title" src="img/title-image.png" />
     </div>
-    <img class="spotlight1" src="img/spotlight-1.svg" />
-    <img class="spotlight2" src="img/spotlight-2.svg" />
-    <div class="vending-machine">
-      <div class="overlap-group-wrapper">
-        <div class="title-section">
-          <img class="title" src="img/title-image.png" />
-        </div>
-        <div class="main-vending">
-        <div class="main-shadow"></div>
-        <div class="vending-shadow"></div>
-        <div class="handle"></div>
-        <div class="handle-2"></div>
-        <img class="toe" src="img/toe-kick2.svg" />
-        <img class="toe-kick" src="img/toe-kick1.svg" />
-        <div class="yellow-vending"></div>
-        <div class="inside-black"></div>
-        <div class="inside"></div>
-        <div class="inside-red"></div>
-        <div class="box red2"></div>
-        <div class="inside_black3"></div>
-        <div class="inside_shadow3"></div>
-        <img class="pick-up" src="img/pick-up.png" />              
-        <div class="design-side">
-          <div class="overlap-24">
-            <div class="light-side"></div>
-            <div class="red-side"></div>
-          </div>
-        </div>
-        <div class="choose-section">
-          <img class="screen-section" src="img/screen-section.svg" />
-          <button class="start-button">
-            <div class="button-white">
-              <div class="button-yellow"></div>
-              <div class="start-shadow">start</div>
-              <div class="start-text">start</div>
-            </div>
-          </button>
-          <button class="cancel-button">
-            <div class="button-white">
-              <div class="button-yellow"></div>
-              <div class="cancel-shadow">cancel</div>
-              <div class="cancel-text">cancel</div>
-            </div>
-          </button>
-          <button class="finish-button">
-            <div class="button-white">
-              <div class="button-yellow"></div>
-              <div class="finish-shadow">finish</div>
-              <div class="finish-text">finish</div>
-            </div>
-          </button>
-        </div>
-        <div class="food-section">
-            <div class="inside_black2"></div>
-            <div class="inside_shadow2"></div>
-            <div class="redbox"></div>
-            <div class="division"></div>
-            <div class="division-2"></div>
-            <div class="division-3"></div>
-            <img class="ellipse1" src="img/light-vending.png" />
-            <img class="ellipse2" src="img/light-vending.png" />
-            <img class="ellipse3" src="img/light-vending.png" />
-            <div class="stand stand-1"></div>
-              <div class="stand stand-2"></div>
-              <div class="stand stand-3"></div>
-              <div class="stand stand-4"></div>
-              <div class="stand stand-5"></div>
-              <div class="stand stand-6"></div>
-              <div class="stand stand-7"></div>
-              <div class="stand stand-8"></div>
-              <div class="stand stand-9"></div>
-              <div class="stand stand-10"></div>
-              <div class="stand stand-11"></div>
-              <div class="stand stand-12"></div>
-              <div class="stand stand-13"></div>
-              <div class="stand stand-14"></div>
-              <div class="stand stand-15"></div>
-              <div class="stand stand-16"></div>
-              <div class="stand stand-17"></div>
-              <div class="stand stand-18"></div>
-            <div class="snacks-section">
-              <div class="overlap-6">
-                <div class="category-text-shadow">Snacks</div>
-                <div class="category-text">Snacks</div>
-                <div class="empanada-section">
-                  <div class="overlap-middle">
-                    <img class="shadow-food" src="img/shadow-foodep.svg" />
-                    <img class="empanada" src="img/empanada-2.png" />
-                    <img class="empanada-2" src="img/empanada-2.png" />
-                    <img class="empanada-3" src="img/empanada-2.png" />
-                    <button class="button-green"></button>
-                    <div class="food-text">Empanada</div>
-                  </div>
-                </div>  
-                <div class="quick2-section">
-                  <div class="overlap-last">
-                    <img class="shadow-food" src="img/shadow-foodqk.svg" />
-                    <img class="quick" src="img/quick-2x.png" />
-                    <img class="quick-x" src="img/quick2x-1.png" />
-                    <img class="quick-2" src="img/quick2x-2.png" />
-                    <button class="button-green"></button>
-                    <div class="food-text">Quick2x</div>
-                  </div>
-                </div>
-                <div class="sandwich-section">
-                  <div class="overlap-first">
-                    <img class="shadow-food" src="img/shadow-foodsw.svg" />
-                    <img class="sandwich" src="img/sandwich-2.png" />
-                    <img class="sandwich-2" src="img/sandwich-2.png" />
-                    <img class="sandwich-3" src="img/sandwich-2.png" />
-                    <button class="button-green"></button>
-                    <div class="food-text">Sandwich</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="rice-meals-section">
-              <div class="overlap-16">
-                  <div class="category-text-shadow" style="left: 60%;">Rice Meals</div>
-                  <div class="category-text" style="left: 60%;">Rice Meals</div>
-                  <div class="pastil-section">
-                    <div class="overlap-first">
-                      <img class="shadow-food" src="img/shadow-foodpt.svg" />
-                      <img class="pastil" src="img/pastil-image2.png" />
-                      <img class="pastil-image" src="img/pastil-image2.png" />
-                      <img class="pastil-2" src="img/pastil-image2.png" />
-                      <button class="button-green"></button>
-                      <div class="food-text">Pastil</div>
-                    </div>
-                  </div>
-                  <div class="sisig-section">
-                    <div class="overlap-middle">
-                      <img class="shadow-food" src="img/shadow-foodss.svg" />
-                      <img class="sisig-silog" src="img/sisig-silog-2.png" />
-                      <img class="sisig-silog-2" src="img/sisig-silog-3.png" />
-                      <img class="sisig-silog-3" src="img/sisig-silog-4.png" />
-                      <button class="button-green"></button>
-                      <div class="food-text">Sisilog</div>
-                    </div>
-                  </div>
-                  <div class="sinuglaw-section">
-                    <div class="overlap-last">
-                      <img class="shadow-food" src="img/shadow-foodsin.svg" />
-                      <img class="sinuglaw" src="img/sinuglaw-image1.png" />
-                      <img class="sinuglaw-image" src="img/sinuglaw-image1.png" />
-                      <img class="sinuglaw-2" src="img/sinuglaw-image1.png" />
-                      <button class="button-green"></button>
-                      <div class="food-text">Sinuglaw</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div class="drinks-section">
-              <div class="overlap-20">
-                  <div class="category-text-shadow">Drinks</div>
-                  <div class="category-text">Drinks</div>
-                  <div class="cobra-section">
-                    <div class="overlap-last">
-                      <img class="shadow-food" src="img/shadow-foodcb.svg" />
-                      <button class="button-green"></button>
-                      <div class="food-text">Cobra</div>
-                      <img class="cobra" src="img/cobra-2.png" />
-                      <img class="cobra-2" src="img/cobra-2.png" />
-                      <img class="cobra-3" src="img/cobra-3.png" />
-                    </div>
-                  </div>
-                  <div class="donmac-section">
-                    <div class="overlap-middle">
-                      <img class="shadow-food" src="img/shadow-fooddm.svg" />
-                      <img class="don-mac" src="img/don-mac-image3.png" />
-                      <img class="don-mac-image" src="img/don-mac-image1.png" />
-                      <img class="don-mac-2" src="img/don-mac-image1.png" />
-                      <button class="button-green"></button>
-                      <div class="food-text">DonMac</div>
-                    </div>
-                  </div>
-                  <div class="tastickles-section">
-                    <div class="overlap-first">
-                      <img class="shadow-food" src="img/shadow-foodts.svg" />
-                      <img class="tastickles" src="img/tastickles-1.png" />
-                      <img class="tastickles-2" src="img/tastickles-1.png" />
-                      <img class="tastickles-3" src="img/tastickles-1.png" />
-                      <button class="button-green"></button>
-                      <div class="food-text">Tastickles</div>
-                    </div>
-                  </div>
-            </div>
-          </div>
-        </div>
-            <img class="flowers-2" src="img/flowers-3.png" />
-            <img class="flowers-3" src="img/flowers-1.png" />
-            <img class="flowers-4" src="img/flowers-2.png" />
+    <div class="main-vending">
+      <div class="main-shadow"></div>
+      <div class="vending-shadow"></div>
+      <div class="handle"></div>
+      <div class="handle-2"></div>
+      <img class="toe" src="img/toe-kick2.svg" />
+      <img class="toe-kick" src="img/toe-kick1.svg" />
+      <div class="yellow-vending"></div>
+      <div class="inside-black"></div>
+      <div class="inside"></div>
+      <div class="inside-red"></div>
+      <div class="box red2"></div>
+      <div class="inside_black3"></div>
+      <div class="inside_shadow3"></div>
+      <img class="pick-up" src="img/pick-up.png" />
+      <div class="design-side">
+        <div class="overlap-24">
+          <div class="light-side"></div>
+          <div class="red-side"></div>
         </div>
       </div>
+      <div class="choose-section">
+        <img class="screen-section" src="img/screen-section.svg" />
+        <button class="start-button">
+          <div class="button-white">
+            <div class="button-yellow"></div>
+            <div class="start-shadow">start</div>
+            <div class="start-text">start</div>
+          </div>
+        </button>
+        <button class="cancel-button">
+          <div class="button-white">
+            <div class="button-yellow"></div>
+            <div class="cancel-shadow">cancel</div>
+            <div class="cancel-text">cancel</div>
+          </div>
+        </button>
+        <button class="finish-button">
+          <div class="button-white">
+            <div class="button-yellow"></div>
+            <div class="finish-shadow">finish</div>
+            <div class="finish-text">finish</div>
+          </div>
+        </button>
+      </div>
+      <div class="food-section">
+        <div class="inside_black2"></div>
+        <div class="inside_shadow2"></div>
+        <div class="redbox"></div>
+        <div class="division"></div>
+        <div class="division-2"></div>
+        <div class="division-3"></div>
+        <img class="ellipse1" src="img/light-vending.png" />
+        <img class="ellipse2" src="img/light-vending.png" />
+        <img class="ellipse3" src="img/light-vending.png" />
+        <div class="stand stand-1"></div>
+        <div class="stand stand-2"></div>
+        <div class="stand stand-3"></div>
+        <div class="stand stand-4"></div>
+        <div class="stand stand-5"></div>
+        <div class="stand stand-6"></div>
+        <div class="stand stand-7"></div>
+        <div class="stand stand-8"></div>
+        <div class="stand stand-9"></div>
+        <div class="stand stand-10"></div>
+        <div class="stand stand-11"></div>
+        <div class="stand stand-12"></div>
+        <div class="stand stand-13"></div>
+        <div class="stand stand-14"></div>
+        <div class="stand stand-15"></div>
+        <div class="stand stand-16"></div>
+        <div class="stand stand-17"></div>
+        <div class="stand stand-18"></div>
+        <div class="snacks-section">
+        <div class="category-text-shadow">Snacks</div>
+          <div class="category-text">Snacks</div>
+          <div class="overlap-6">
+            <div class="empanada-section">
+              <div class="overlap-middle">
+                <img class="shadow-food" src="img/shadow-foodep.svg" />
+                <img class="empanada" src="img/empanada-2.png" />
+                <img class="empanada-2" src="img/empanada-2.png" />
+                <img class="empanada-3" src="img/empanada-2.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Empanada</div>
+              </div>
+            </div>
+            <div class="quick2-section">
+              <div class="overlap-last">
+                <img class="shadow-food" src="img/shadow-foodqk.svg" />
+                <img class="quick" src="img/quick-2x.png" />
+                <img class="quick-x" src="img/quick2x-1.png" />
+                <img class="quick-2" src="img/quick2x-2.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Quick2x</div>
+              </div>
+            </div>
+            <div class="sandwich-section">
+              <div class="overlap-first">
+                <img class="shadow-food" src="img/shadow-foodsw.svg" />
+                <img class="sandwich" src="img/sandwich-2.png" />
+                <img class="sandwich-2" src="img/sandwich-2.png" />
+                <img class="sandwich-3" src="img/sandwich-2.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Sandwich</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rice-meals-section">
+          <div class="overlap-16">
+            <div class="category-text-shadow">Rice Meals</div>
+            <div class="category-text">Rice Meals</div>
+            <div class="pastil-section">
+              <div class="overlap-first">
+                <img class="shadow-food" src="img/shadow-foodpt.svg" />
+                <img class="pastil" src="img/pastil-image2.png" />
+                <img class="pastil-image" src="img/pastil-image2.png" />
+                <img class="pastil-2" src="img/pastil-image2.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Pastil</div>
+              </div>
+            </div>
+            <div class="sisig-section">
+              <div class="overlap-middle">
+                <img class="shadow-food" src="img/shadow-foodss.svg" />
+                <img class="sisig-silog" src="img/sisig-silog-2.png" />
+                <img class="sisig-silog-2" src="img/sisig-silog-3.png" />
+                <img class="sisig-silog-3" src="img/sisig-silog-4.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Sisilog</div>
+              </div>
+            </div>
+            <div class="sinuglaw-section">
+              <div class="overlap-last">
+                <img class="shadow-food" src="img/shadow-foodsin.svg" />
+                <img class="sinuglaw" src="img/sinuglaw-image1.png" />
+                <img class="sinuglaw-image" src="img/sinuglaw-image1.png" />
+                <img class="sinuglaw-2" src="img/sinuglaw-image1.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Sinuglaw</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drinks-section">
+          <div class="overlap-20">
+            
+          <div class="category-text-shadow">Drinks</div>
+                <div class="category-text">Drinks</div>
+            <div class="cobra-section">
+              <div class="overlap-last">
+                <img class="shadow-food" src="img/shadow-foodcb.svg" />
+                <button class="button-green"></button>
+                <div class="food-text">Cobra</div>
+                <img class="cobra" src="img/cobra-2.png" />
+                <img class="cobra-2" src="img/cobra-2.png" />
+                <img class="cobra-3" src="img/cobra-3.png" />
+              </div>
+            </div>
+            <div class="donmac-section">
+              <div class="overlap-middle">
+                <img class="shadow-food" src="img/shadow-fooddm.svg" />
+                <img class="don-mac" src="img/don-mac-image3.png"/>
+                <img class="don-mac-image" src="img/don-mac-image1.png" />
+                <img class="don-mac-2" src="img/don-mac-image1.png" />
+                <button class="button-green"></button>
+                <div class="food-text">DonMac</div>
+              </div>
+            </div>
+            <div class="tastickles-section">
+              <div class="overlap-first">
+                <img class="shadow-food" src="img/shadow-foodts.svg" />
+                <img class="tastickles" src="img/tastickles-1.png" />
+                <img class="tastickles-2" src="img/tastickles-1.png" />
+                <img class="tastickles-3" src="img/tastickles-1.png" />
+                <button class="button-green"></button>
+                <div class="food-text">Tastickles</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="flowers-2" src="img/flowers-3.png" />
+      <img class="flowers-3" src="img/flowers-1.png" />
+      <img class="flowers-4" src="img/flowers-2.png" />
     </div>
-    <div class="background"></div>
-    </div>
+  </div>
+  </div>
+  <div class="background"></div>
+  </div>
+  </div>
   );
 };
 
