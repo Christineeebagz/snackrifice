@@ -1,3 +1,9 @@
+#start-test{
+  color: yellow;
+  background-color: transparent;
+  z-index: 9999;  
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -259,8 +265,18 @@ body, html {
   transform: translate(-50%, -50%);
 }
 
-.vending-machine .start-button {
-  all: unset;
+/* .vending-machine .start-button {
+  box-sizing: border-box;
+  position: relative;
+  width: 85%;
+  height: 13%;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;    
+} */
+
+.start-button-new{
   box-sizing: border-box;
   position: relative;
   width: 85%;
@@ -334,7 +350,7 @@ body, html {
 }
 
 .vending-machine .cancel-button {
-  all: unset;
+  
   box-sizing: border-box;
   position: relative;
   width: 85%;
@@ -345,6 +361,17 @@ body, html {
 
 }
 
+
+
+.cancel-button-new{
+  box-sizing: border-box;
+  position: relative;
+  width: 85%;
+  height: 13%;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 .vending-machine .cancel-shadow {
@@ -390,8 +417,8 @@ body, html {
 
 }
 
-.vending-machine .finish-button {
-  all: unset;
+.finish-button {
+ 
   box-sizing: border-box;
   position: relative;
   width: 85%;
@@ -730,17 +757,17 @@ body, html {
   transform: translate(-50%, -50%); 
 }
 
-.vending-machine .food-text {
+.food-text {
   position: absolute;
   z-index: 10; 
-  top: 88%;
+  top: 50%;
   left: 50%;
   text-shadow: 0px 4px 4px #00000040;
-  -webkit-text-stroke: 1px #2b2b2b;
+  -webkit-text-stroke: 0.5px #2b2b2b;
   font-family: "Press Start 2P", Helvetica;
-  font-weight: 400;
+  font-weight: 500;
   color: #fefefe;
-  font-size: 100%;
+  font-size: 250%;
   letter-spacing: 3%;
   line-height: normal;
   transform: translate(-50%, -50%);
@@ -1297,18 +1324,18 @@ button:active {
 }
 
 /* Specific button styles for start, cancel, and finish buttons */
-.vending-machine .start-button:hover,
-.vending-machine .cancel-button:hover,
+.vending-machine .start-button-new:hover,
+.vending-machine .cancel-button-new:hover,
 .vending-machine .finish-button:hover {
   filter: brightness(1.2); /* Light up effect */
 }
 
-.vending-machine .start-button:active,
+/* .vending-machine .start-button-new:active,
 .vending-machine .cancel-button:active,
 .vending-machine .finish-button:active {
-  transform: scale(0); /* Slightly shrink the button */
-  transition: transform 0.1s ease; /* Fast transition for press animation */
-}
+  transform: scale(0); /* Slightly shrink the button 
+  transition: transform 0.1s ease; /* Fast transition for press animation 
+}  */
 
 @keyframes blink {
   0%, 100% {
@@ -1318,3 +1345,15 @@ button:active {
     opacity: 0;
   }
 }
+
+/* Christine's Edits */
+#bottom {
+  position: left;
+  bottom: 0;
+  width: 100%;
+  background-color: #f1f1f1; /* Optional: for visibility */
+  text-align: center; /* Optional: to center the text */
+  padding: 10px; /* Optional: to add some padding */
+}
+
+

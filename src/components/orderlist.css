@@ -1,0 +1,17 @@
+img{
+    width:70px;
+}
+
+.pick-up{
+    position: absolute;
+  width: 64%;
+  height: 17%;
+  top: 85%;
+  left: 39%;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: flex-start; /* Align items to the start horizontally */
+  align-items: center; /* Align items to the center vertically */
+  overflow-x: auto; /* Allow scrolling if items overflow horizontally */
+}
