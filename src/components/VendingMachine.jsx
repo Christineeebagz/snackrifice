@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import OrderList from "./OrderList";
 import "./style.css";
 import "./global.css";
+import QuantityBar from "./QuantityBar";
 
 const VendingMachine = () => {
   const [order, setOrder] = useState([]);
@@ -93,6 +94,7 @@ const VendingMachine = () => {
             </div>
             <div className="choose-section">
               <img className="screen-section" src="img/screen-section.svg" />
+              <QuantityBar orders={order} />
               <div className="start-button-new">
                 <span onClick={startMachine}>
                   <span className="button-white">
