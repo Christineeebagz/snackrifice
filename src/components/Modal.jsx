@@ -15,10 +15,10 @@ function Modal({ setOpenModal }) {
           </button>
         </div>
         <div className="title">
-          <h1>Are You Sure You Want to Continue?</h1>
+          <h1>Thank you!</h1>
         </div>
         <div className="body">
-          <p>The next page looks amazing. Hope you want to go there!</p>
+          <p>Check the items below to verify your orders.</p>
         </div>
         <div className="footer">
           <button
@@ -29,7 +29,14 @@ function Modal({ setOpenModal }) {
           >
             Cancel
           </button>
-          <button>Continue</button>
+          <button 
+            onClick={() => {
+              setOpenModal(false);
+            }}
+            id="continueBtn"
+          >
+            Continue
+          </button>
         </div>
       </div>
     </div>
@@ -37,40 +44,3 @@ function Modal({ setOpenModal }) {
 }
 
 export default Modal;
-
-// import React, { useState } from 'react';
-// import { Button, Modal } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
-// const Modal = () => {
-//   const [show, setShow] = useState(false);
-
-//   const handleShow = () => setShow(true);
-//   const handleClose = () => setShow(false);
-
-//   return (
-//     <div>
-//       <Button variant="primary" onClick={handleShow}>
-//         Finish
-//       </Button>
-
-//       <Modal show={show} onHide={handleClose} centered>
-//         <Modal.Header closeButton>
-//           <Modal.Title>Modal Heading</Modal.Title>
-//         </Modal.Header>
-//         <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-//         <Modal.Footer>
-//           <Button variant="secondary" onClick={handleClose}>
-//             Close
-//           </Button>
-//           <Button variant="primary" onClick={handleClose}>
-//             Save Changes
-//           </Button>
-//         </Modal.Footer>
-//       </Modal>
-//     </div>
-    
-//   );
-// };
-
-// export default Modal;
