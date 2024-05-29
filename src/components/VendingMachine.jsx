@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import QuantityBar from "./QuantityBar";
 import OrderList from "./OrderList";
+import Modal from "./Modal";
 import "./style.css";
 import "./global.css";
-import QuantityBar from "./QuantityBar";
 
 const VendingMachine = () => {
   const [order, setOrder] = useState([]);
   const [started, setStarted] = useState(false);
-  const [orderDone, setOrderDone] = useState(false);
+  // const [orderDone, setOrderDone] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleFoodButtonClick = (name, image) => {
     addOrder(name, image);
@@ -44,20 +46,34 @@ const VendingMachine = () => {
     console.log("Cleared Order");
     setOrder([]);
     setStarted(false);
-    setOrderDone(false);
+    // setOrderDone(false);
   };
 
   const startMachine = () => {
     setStarted(true);
     console.log("Start Machine");
   };
+
   const doneOrder = () => {
     if (order.every((item) => item.quantity > 0)) {
-      setOrderDone(true);
+      // setOrderDone(true);
+      // setOpenModal(true);
       console.log(order);
       // Add your order completion logic here
     }
   };
+
+  const handleFinishClick = () => {
+    if (
+      started &&
+      order.length > 0 &&
+      !order.some((item) => item.quantity === 0)
+    ) {
+      doneOrder();
+      setModalOpen(true);
+    }
+  };
+
   return (
     <div>
       <div className="navigation-bar">
@@ -116,7 +132,8 @@ const VendingMachine = () => {
               </div>
               <div className="finish-button">
                 <span
-                  onClick={doneOrder}
+                  className="openModalBtn"
+                  onClick={handleFinishClick}
                   disabled={
                     !started ||
                     order.length === 0 ||
@@ -466,6 +483,7 @@ const VendingMachine = () => {
       <div id="bottom">
         <h1>Hello </h1>
       </div>
+      {modalOpen && <Modal setOpenModal={setModalOpen} />}
     </div>
   );
 };
