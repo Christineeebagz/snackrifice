@@ -9,7 +9,7 @@ const VendingMachine = () => {
   const [order, setOrder] = useState([]);
   const [started, setStarted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-
+  
   const handleFoodButtonClick = (name, image) => {
     addOrder(name, image);
   };
@@ -477,9 +477,6 @@ const VendingMachine = () => {
             {/* Place Order */}
           </button>
         </div>
-      </div>
-      <div id="bottom">
-        <h1>Hello </h1>
       </div>
       {modalOpen && <Modal setOpenModal={setModalOpen} />}
     </div>

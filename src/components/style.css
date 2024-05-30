@@ -653,7 +653,7 @@ body, html {
 .vending-machine .category-text-shadow {
   position: absolute;
   width: 50%;
-  top: 18%;
+  top: 16%;
   left: 65%;
   transform: translate(-50%, -50%);
   text-shadow: 0px 4px 4px #00000040;
@@ -767,10 +767,10 @@ body, html {
   font-family: "Press Start 2P", Helvetica;
   font-weight: 500;
   color: #fefefe;
-  font-size: 250%;
   letter-spacing: 3%;
   line-height: normal;
   transform: translate(-50%, -50%);
+  font-size: 300%;
 }
 
 .vending-machine .quick2-section {
