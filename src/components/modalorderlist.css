@@ -1,6 +1,6 @@
 .item-list {
       display: flex; 
-      flex-wrap: wrap-reverse; /* Allow items to wrap within the container */
+      flex-wrap: wrap; /* Allow items to wrap within the container */
       margin-top: 0;
       text-align: center;
       font-size: 1.2rem; /* Ensure the title has proper font size */
