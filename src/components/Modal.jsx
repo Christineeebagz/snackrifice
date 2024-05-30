@@ -1,8 +1,8 @@
 import React from "react";
+import ModalOrderList from "./ModalOrderList";
 import "./Modal.css";
 
-function Modal({ setOpenModal }) {
-
+function Modal({ setOpenModal, orders, clearOrder }) {
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -21,22 +21,24 @@ function Modal({ setOpenModal }) {
         <div className="body">
           <p>Check the items below to verify your orders.</p>
         </div>
+        <ModalOrderList orders={orders} />
         <div className="footer">
           <button
             onClick={() => {
               setOpenModal(false);
             }}
-            id="cancelBtn"
+            id="editBtn"
           >
-            Cancel
+            Edit
           </button>
           <button 
             onClick={() => {
+              clearOrder();
               setOpenModal(false);
             }}
-            id="continueBtn"
+            id="doneBtn"
           >
-            Continue
+            Done
           </button>
         </div>
       </div>

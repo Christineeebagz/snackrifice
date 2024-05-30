@@ -1,0 +1,45 @@
+.item-list {
+      display: flex; 
+      flex-wrap: wrap-reverse; /* Allow items to wrap within the container */
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.2rem; /* Ensure the title has proper font size */
+      font-family: "Lora";
+      color: #670a0a;
+      border: 2px solid #670a0a;
+      border-radius: 5px;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      max-width: 600px;
+      max-height: 500px; 
+      align-content: space-evenly;
+}
+
+.order-list {
+      flex: 1 0 30%; /* Adjust the width of each item */
+      padding: 10px;
+      box-sizing: border-box; /* Ensure padding does not affect width */
+      margin: 5px;
+      min-width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-indent: 10px;
+}
+
+.order-list img {
+      max-width: 100%;
+      height: auto; /* Make sure images are responsive */
+}
+
+.item-info {
+      margin-top: 10px;
+      text-align: center;
+}
+
+.item-name {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+}

@@ -478,7 +478,7 @@ const VendingMachine = () => {
           </button>
         </div>
       </div>
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {modalOpen && <Modal setOpenModal={setModalOpen} orders={order} clearOrder={clearOrder} />}
     </div>
   );
 };
