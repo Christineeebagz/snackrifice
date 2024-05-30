@@ -8,9 +8,8 @@ import "./global.css";
 const VendingMachine = () => {
   const [order, setOrder] = useState([]);
   const [started, setStarted] = useState(false);
-  // const [orderDone, setOrderDone] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-
+  
   const handleFoodButtonClick = (name, image) => {
     addOrder(name, image);
   };
@@ -46,7 +45,6 @@ const VendingMachine = () => {
     console.log("Cleared Order");
     setOrder([]);
     setStarted(false);
-    // setOrderDone(false);
   };
 
   const startMachine = () => {
@@ -480,10 +478,7 @@ const VendingMachine = () => {
           </button>
         </div>
       </div>
-      <div id="bottom">
-        <h1>Hello </h1>
-      </div>
-      {modalOpen && <Modal setOpenModal={setModalOpen} />}
+      {modalOpen && <Modal setOpenModal={setModalOpen} orders={order} clearOrder={clearOrder} />}
     </div>
   );
 };
