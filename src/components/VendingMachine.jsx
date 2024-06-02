@@ -9,9 +9,23 @@ const VendingMachine = () => {
   const [order, setOrder] = useState([]);
   const [started, setStarted] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
-  
+  const [current, setCurrent] = useState(null);
+
+  const adjustQuantity = (name, newQuantity) => {
+    setOrder((prevOrder) =>
+      prevOrder.map((item) =>
+        item.name === name ? { ...item, quantity: newQuantity } : item
+      )
+    );
+  };
+
+  const clickOrder = (name) => {
+    setCurrent(name);
+  };
+
   const handleFoodButtonClick = (name, image) => {
     addOrder(name, image);
+    clickOrder(name);
   };
 
   const addOrder = (name, image) => {
@@ -99,16 +113,23 @@ const VendingMachine = () => {
             <div className="inside_black3"></div>
             <div className="inside_shadow3"></div>
             <img className="pick-up" src="img/pick-up.png" />
-            <OrderList orders={order} />
+            <OrderList orders={order} setCurrent={current} />
             <div className="design-side">
               <div className="overlap-24">
                 <div className="light-side"></div>
                 <div className="red-side"></div>
               </div>
             </div>
+
             <div className="choose-section">
+              {/* <QuantityBar orders={order} current={current} /> */}
+              <QuantityBar
+                orders={order}
+                current={current}
+                adjustQuantity={adjustQuantity}
+              />
               <img className="screen-section" src="img/screen-section.svg" />
-              <QuantityBar orders={order} />
+
               <div className="start-button-new">
                 <span onClick={startMachine}>
                   <span className="button-white">
@@ -189,12 +210,12 @@ const VendingMachine = () => {
                       <img className="empanada-3" src="img/empanada-2.png" />
                       <button
                         className="button-green"
-                        onClick={() =>
+                        onClick={() => {
                           handleFoodButtonClick(
                             "Empanada",
-                            "img/empanada-2.png"
-                          )
-                        }
+                            "img/Snackrifice-pics/empanada.png"
+                          );
+                        }}
                         disabled={!started}
                       >
                         <div className="food-text">Empanada</div>
@@ -213,7 +234,10 @@ const VendingMachine = () => {
                       <button
                         className="button-green"
                         onClick={() =>
-                          handleFoodButtonClick("Quick2x", "img/quick2x-2.png")
+                          handleFoodButtonClick(
+                            "Quick2x",
+                            "img/Snackrifice-pics/quick2.png"
+                          )
                         }
                         disabled={!started}
                       >
@@ -235,7 +259,7 @@ const VendingMachine = () => {
                         onClick={() =>
                           handleFoodButtonClick(
                             "Sandwich",
-                            "img/sandwich-2.png"
+                            "img/Snackrifice-pics/sandwich.png"
                           )
                         }
                         disabled={!started}
@@ -259,7 +283,7 @@ const VendingMachine = () => {
                       <img className="pastil" src="img/pastil-image2.png" />
                       <img
                         className="pastil-image"
-                        src="img/pastil-image2.png"
+                        src="img/Snackrifice-pics/pastil.png"
                       />
                       <img className="pastil-2" src="img/pastil-image2.png" />
                       <button
@@ -299,7 +323,7 @@ const VendingMachine = () => {
                         onClick={() =>
                           handleFoodButtonClick(
                             "Sisilog",
-                            "img/sisig-silog-4.png"
+                            "img/Snackrifice-pics/sisilog.png"
                           )
                         }
                         disabled={!started}
@@ -328,7 +352,7 @@ const VendingMachine = () => {
                         onClick={() =>
                           handleFoodButtonClick(
                             "Sinuglaw",
-                            "img/sinuglaw-image1.png"
+                            "img/Snackrifice-pics/sinuglaw.png"
                           )
                         }
                         disabled={!started}
@@ -352,7 +376,10 @@ const VendingMachine = () => {
                       <button
                         className="button-green"
                         onClick={() =>
-                          handleFoodButtonClick("Cobra", "img/cobra-3.png")
+                          handleFoodButtonClick(
+                            "Cobra",
+                            "img/Snackrifice-pics/cobra.png"
+                          )
                         }
                         disabled={!started}
                       >
@@ -380,7 +407,7 @@ const VendingMachine = () => {
                         onClick={() =>
                           handleFoodButtonClick(
                             "DonMac",
-                            "img/don-mac-image1.png"
+                            "img/Snackrifice-pics/don-mac.png"
                           )
                         }
                         disabled={!started}
@@ -409,7 +436,7 @@ const VendingMachine = () => {
                         onClick={() =>
                           handleFoodButtonClick(
                             "Tastickles",
-                            "img/tastickles-1.png"
+                            "img/Snackrifice-pics/tastickles.png"
                           )
                         }
                         disabled={!started}
@@ -478,7 +505,13 @@ const VendingMachine = () => {
           </button>
         </div>
       </div>
-      {modalOpen && <Modal setOpenModal={setModalOpen} orders={order} clearOrder={clearOrder} />}
+      {modalOpen && (
+        <Modal
+          setOpenModal={setModalOpen}
+          orders={order}
+          clearOrder={clearOrder}
+        />
+      )}
     </div>
   );
 };
