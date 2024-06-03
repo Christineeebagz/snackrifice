@@ -1,6 +1,6 @@
 .item-list {
       display: flex; 
-      flex-wrap: wrap-reverse; /* Allow items to wrap within the container */
+      flex-wrap: wrap; /* Allow items to wrap within the container */
       margin-top: 0;
       text-align: center;
       font-size: 1.2rem; /* Ensure the title has proper font size */
@@ -14,11 +14,12 @@
       max-width: 600px;
       max-height: 500px; 
       align-content: space-evenly;
+      padding: 5px;
 }
 
 .order-list {
       flex: 1 0 30%; /* Adjust the width of each item */
-      padding: 10px;
+      padding-bottom: 5px;
       box-sizing: border-box; /* Ensure padding does not affect width */
       margin: 5px;
       min-width: 100px;
@@ -29,7 +30,7 @@
 }
 
 .order-list img {
-      max-width: 100%;
+      max-width: 65px;
       height: auto; /* Make sure images are responsive */
 }
 
