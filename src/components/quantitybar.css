@@ -1,17 +1,16 @@
 .quantity-bar{
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  padding: 30px;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  width: 120%;
-  height: 40%;
+  width: 25%;
+  height: 20%;
   top: 25%;
-  left: 50%;
+  left: 83.5%;
   transform: translate(-50%, -50%);
   gap: 10px; /* Adjust as needed */
+  position: fixed;
+  z-index: 9999;
 }
 
 .content-container {
@@ -38,18 +37,17 @@
   display: flex;
   flex-direction: rows;
   gap:20px;
-  padding-left: 75px;
-  align-items: center;
   justify-content: center;
   position: fixed;
+  left: 30%;
 }
 
 
   
 .name-container {
-  padding-top:10px;
   text-align: center;
   font-family: "Press Start 2P", Helvetica;
+  margin-bottom: 6px;
   /* color:#386641; */
 }
   

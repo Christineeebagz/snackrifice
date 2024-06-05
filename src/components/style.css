@@ -919,10 +919,8 @@ body, html {
 
 .vending-machine .pastil-image {
   position: absolute;
-  width: auto; 
-  height: auto; 
-  max-width: 50%; 
-  max-height: 50%; 
+  width: 30%; 
+  height: 55%; 
   top: 47%;
   left: 50%; 
   transform: translate(-50%, -50%); 
@@ -930,8 +928,8 @@ body, html {
 
 .vending-machine .pastil-2 {
   position: absolute;
-  width: auto; 
-  height: 88px; 
+  width: 30%; 
+  height: 67%; 
   max-width: 65%;
   top: 59%;
   left: 60%; 

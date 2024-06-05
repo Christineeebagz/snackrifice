@@ -285,7 +285,7 @@ const VendingMachine = () => {
                       <img className="pastil" src="img/pastil.png" />
                       <img
                         className="pastil-image"
-                        src="img/Snackrifice-pics/pastil.png"
+                        src="img/pastil.png"
                       />
                       <img className="pastil-2" src="img/pastil.png" />
                       <button
