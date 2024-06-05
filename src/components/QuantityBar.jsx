@@ -1,7 +1,7 @@
-import "./quantitybar.css";
 import React from "react";
+import "./quantitybar.css";
 
-const QuantityBar = ({ orders, current, adjustQuantity }) => {
+const QuantityBar = ({ orders, current, adjustQuantity, removeItem }) => {
   const currentItem = orders.find((item) => item.name === current);
 
   const handleIncrease = () => {
@@ -11,8 +11,10 @@ const QuantityBar = ({ orders, current, adjustQuantity }) => {
   };
 
   const handleDecrease = () => {
-    if (currentItem && currentItem.quantity > 0) {
+    if (currentItem && currentItem.quantity > 1) {
       adjustQuantity(currentItem.name, currentItem.quantity - 1);
+    } else {
+      removeItem(currentItem.name);
     }
   };
 
@@ -27,13 +29,13 @@ const QuantityBar = ({ orders, current, adjustQuantity }) => {
             <img src={currentItem.image} />
           </div>
           <div className="button-quantity-container">
-            <button className="quantity-bar-button" onClick={handleIncrease}>
-              +
+            <button className="quantity-bar-button" onClick={handleDecrease}>
+              -
             </button>
             <span className="quantity">{currentItem.quantity}</span>
 
-            <button className="quantity-bar-button" onClick={handleDecrease}>
-              -
+            <button className="quantity-bar-button" onClick={handleIncrease}>
+              +
             </button>
           </div>
         </div>

@@ -11,12 +11,9 @@ const VendingMachine = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [current, setCurrent] = useState(null);
 
-  const adjustQuantity = (name, newQuantity) => {
-    setOrder((prevOrder) =>
-      prevOrder.map((item) =>
-        item.name === name ? { ...item, quantity: newQuantity } : item
-      )
-    );
+  const startMachine = () => {
+    setStarted(true);
+    console.log("Start Machine");
   };
 
   const clickOrder = (name) => {
@@ -61,17 +58,9 @@ const VendingMachine = () => {
     setStarted(false);
   };
 
-  const startMachine = () => {
-    setStarted(true);
-    console.log("Start Machine");
-  };
-
   const doneOrder = () => {
     if (order.every((item) => item.quantity > 0)) {
-      // setOrderDone(true);
-      // setOpenModal(true);
       console.log(order);
-      // Add your order completion logic here
     }
   };
 
@@ -86,6 +75,18 @@ const VendingMachine = () => {
     }
   };
 
+  const adjustQuantity = (name, newQuantity) => {
+    setOrder((prevOrder) =>
+      prevOrder.map((item) =>
+        item.name === name ? { ...item, quantity: newQuantity } : item
+      )
+    );
+  };
+
+  const removeItem = (name) => {
+    setOrder((prevOrder) => prevOrder.filter((item) => item.name !== name));
+  };
+  
   return (
     <div>
       <div className="navigation-bar">
@@ -127,6 +128,7 @@ const VendingMachine = () => {
                 orders={order}
                 current={current}
                 adjustQuantity={adjustQuantity}
+                removeItem={removeItem}
               />
               <img className="screen-section" src="img/screen-section.svg" />
 

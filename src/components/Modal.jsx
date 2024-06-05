@@ -19,7 +19,7 @@ function Modal({ setOpenModal, orders, clearOrder }) {
           <h1>Thank you!</h1>
         </div>
         <div className="body">
-          <p>Check the items below to verify your orders.</p>
+          <h5>Check the items below to verify your orders.</h5>
         </div>
         <ModalOrderList orders={orders} />
         <div className="footer">

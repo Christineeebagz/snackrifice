@@ -1,87 +1,79 @@
-.quantity-bar {
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+.quantity-bar{
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   width: 120%;
   height: 40%;
   top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   gap: 10px; /* Adjust as needed */
-  }
+}
 
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   
-  .image-container {
-    margin-top:-18px;
-    text-align: center;
-  }
+.image-container {
+  margin-top:-18px;
+  text-align: center;
+}
   
-  .button-quantity-container {
-    /* display: absolute;
-    text-align: center;
-    align-items: center; */
-    margin-top:-17px;
-    display: flex;
+.button-quantity-container {
+  /* display: absolute;
+  text-align: center;
+  align-items: center; */
+  margin-top:-17px;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap:20px;
-  }
+}
   
-  .name-container {
-    padding-top:10px;
-    margin-top:-15px;
-    text-align: center;
-     font-family: "Press Start 2P", Helvetica;
-     /* color:#386641; */
+.name-container {
+  padding-top:10px;
+  margin-top:-15px;
+  text-align: center;
+  font-family: "Press Start 2P", Helvetica;
+  /* color:#386641; */
+}
+  
+.quantity-bar-button {
+  height: 30px;
+  background-color: #386641;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  align-items: center;
+  display: flex;
+}
+  
+.quantity {
+  font-size: 20px;
+  text-align: center;
+  /* padding-bottom:40px;
+*/
+  position: absolute;
 
-  }
-  
-  .quantity-bar-button {
-   
-    height: 30px;
-    background-color: #386641;
-    border-radius: 50%;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 0 10px;
-    align-items: center;
-    display: flex;
-    
-   
-  }
-  
-  
-  .quantity {
-    font-size: 20px;
-    text-align: center;
-    /* padding-bottom:40px;
- */
-    position: absolute;
-  
-    font-size: 13px;
-    font-weight: bold;
-    background-color: #fff; /* White background */
-    /* padding: 5px; */
-    padding: 3px  5px;
-    width: 25px; /* Adjust width and height to make it a circle */
-    height: 25px;
-    border-radius: 50%; /* Make it circular */
-    color: #8e0103;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Center the text inside the circle */
-  }
-
-  
-  
+  font-size: 13px;
+  font-weight: bold;
+  background-color: #fff; /* White background */
+  /* padding: 5px; */
+  padding: 3px  5px;
+  width: 25px; /* Adjust width and height to make it a circle */
+  height: 25px;
+  border-radius: 50%; /* Make it circular */
+  color: #8e0103;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the text inside the circle */
+}
