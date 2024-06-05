@@ -18,39 +18,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  height: 5%;
+  z-index: -1;
 }
   
 .image-container {
-  margin-top:-18px;
+  margin-top:-12px;
   text-align: center;
+  position: relative;
+  z-index: -1;
 }
   
 .button-quantity-container {
   /* display: absolute;
   text-align: center;
   align-items: center; */
-  margin-top:-17px;
+  margin-top:-15px;
   display: flex;
+  flex-direction: rows;
+  gap:20px;
+  padding-left: 75px;
   align-items: center;
   justify-content: center;
-  gap:20px;
+  position: fixed;
 }
+
+
   
 .name-container {
   padding-top:10px;
-  margin-top:-15px;
   text-align: center;
   font-family: "Press Start 2P", Helvetica;
   /* color:#386641; */
 }
   
 .quantity-bar-button {
-  height: 30px;
+  height: 20px;
   background-color: #386641;
   border-radius: 50%;
   border: none;
   color: white;
-  font-size: 20px;
+  font-size: 10px;
   cursor: pointer;
   margin: 0 10px;
   align-items: center;

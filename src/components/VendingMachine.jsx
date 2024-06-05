@@ -282,18 +282,18 @@ const VendingMachine = () => {
                         className="shadow-food"
                         src="img/shadow-foodpt.svg"
                       />
-                      <img className="pastil" src="img/pastil-image2.png" />
+                      <img className="pastil" src="img/pastil.png" />
                       <img
                         className="pastil-image"
                         src="img/Snackrifice-pics/pastil.png"
                       />
-                      <img className="pastil-2" src="img/pastil-image2.png" />
+                      <img className="pastil-2" src="img/pastil.png" />
                       <button
                         className="button-green"
                         onClick={() =>
                           handleFoodButtonClick(
                             "Pastil",
-                            "img/pastil-image2.png"
+                            "img/pastil.png"
                           )
                         }
                         disabled={!started}
